@@ -1,3 +1,7 @@
+if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    set_property(GLOBAL PROPERTY COMPILE_OPTIONS /MP)
+endif()
+
 # source files
 set(sources
     adler32.c

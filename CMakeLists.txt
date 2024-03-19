@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.18.0 FATAL_ERROR)
 set(CMAKE_CXX_STANDARD 20)
 project(ZipLib)
+if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    set_property(GLOBAL PROPERTY COMPILE_OPTIONS /MP)
+endif()
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 add_subdirectory(Source)
